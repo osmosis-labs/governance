@@ -92,12 +92,14 @@ pool 22 REGEN/ATOM gauges 64,65,66: 48000,9000,3000
 pool 42 REGEN/OSMO gauges 124,125,126: 48000,9000,3000
 ```
 
-## Command to make the proposal
-
-See command.md
-
-## How to check this
+### How to check this
 
 Check each step of the above derivation. (You can get the gauge ids for the last part by querying the gauge ID via `osmosisd query incentives gauge-by-id {number}`)
 
 Then query the live proposal at `osmosisd query gov proposal {number}`, and check that the gauge/allocation point mapping is correct.
+
+-- End of proposal description
+
+## Command to make the proposal
+
+See command.md
