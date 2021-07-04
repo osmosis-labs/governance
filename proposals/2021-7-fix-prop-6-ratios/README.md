@@ -52,20 +52,20 @@ This proposal proposes the following (the distribution of 4% from the community 
 
 ```
 Community pool 1%
-ATOM/OSMO 22.84%
-ION/OSMO 2.00%
-AKT/OSMO 11.42%
-AKT/ATOM 11.42%
-DVPN/OSMO 6.86%
-DVPN/ATOM 6.86%
-IRIS/OSMO 1.83%
-IRIS/ATOM 1.83%
-CRO/OSMO 1.83%
-CRO/ATOM 1.83%
-XPRT/OSMO 9.14%
-XPRT/ATOM 9.14%
-REGEN/OSMO 6.00%
-REGEN/ATOM 6.00%
+pool 1 ATOM/OSMO 22.84%
+pool 2 ION/OSMO 2.00%
+pool 3 AKT/OSMO 11.42%
+pool 4 AKT/ATOM 11.42%
+pool 5 DVPN/OSMO 6.86%
+pool 6 DVPN/ATOM 6.86%
+pool 7 IRIS/OSMO 1.83%
+pool 8 IRIS/ATOM 1.83%
+pool 9 CRO/OSMO 1.83%
+pool 10 CRO/ATOM 1.83%
+pool 13 XPRT/OSMO 9.14%
+pool 15 XPRT/ATOM 9.14%
+pool 22 REGEN/OSMO 6.00%
+pool 42 REGEN/ATOM 6.00%
 ```
 
 Prop 6 proposed that these be split across lockup lengths by 80% to 1 day, 15% to 7 days, 5% to 14 days.
