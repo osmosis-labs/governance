@@ -26,7 +26,7 @@ The Community pool allocation is lowered from 5% to 1%, with the remaining 4% be
 This is namely every incentivized pool, except for the OSMO/ION, ATOM/REGEN, and OSMO/REGEN.
 This is done as a means of accounting for the lower than expected rewards in the interrim.
 
-Alternatively the community could equally change vote on a new incentives distribution, such as is proposed in proposal 8, or a new proposal based on liquidity similar to proposal 2.
+Alternatively the community could equally vote on a new incentives distribution, such as is proposed in proposal 8, or a new proposal based on current TVL similar to proposal 2.
 One important thing to remark is that it is plausible that this proposal and proposal 8 both enter their voting period during the same epoch. If this is the case, only one should be voted yes. (As whichever one gets passed second will override the other within the same epoch)
 
 The intended distribution after proposal 6 (per the proposer's understanding):
@@ -73,16 +73,23 @@ We propose resetting the total number of allocation points to 1 million for simp
 the exact percentages from above.
 
 Then, this parameter change is encoded via the following gauge allocation points (annotated)
+
 ```
 Community Pool: 10000
-ATOM/OSMO gauges 1,2,3: 182720,34260,11420
-ION/OSMO gauges 4,5,6: 16000,3000,1000
-AKT/OSMO gauges 7,8,9: 91360,17130,5710
-AKT/ATOM gauges 7,8,9: 91360,17130,5710
-DVPN/OSMO gauges 10,11,12: 54880,10290,3430
-DVPN/ATOM gauges 13,14,15: 54880,10290,3430
-DVPN/OSMO gauges 16,17,18: 54880,10290,3430
-DVPN/ATOM gauges 19,20,21: 54880,10290,3430
+pool 1 ATOM/OSMO gauges 1,2,3: 182720,34260,11420
+pool 2 ION/OSMO gauges 4,5,6: 16000,3000,1000
+pool 3 AKT/OSMO gauges 7,8,9: 91360,17130,5710
+pool 4 AKT/ATOM gauges 10,11,12: 91360,17130,5710
+pool 5 DVPN/OSMO gauges 13,14,15: 54880,10290,3430
+pool 6 DVPN/ATOM gauges 16,17,18: 54880,10290,3430
+pool 7 IRIS/OSMO gauges 19,20,21: 14640,2745,915
+pool 8 IRIS/ATOM gauges 22,23,24: 14640,2745,915
+pool 9 CRO/OSMO gauges 25,26,27: 14640,2745,915
+pool 10 CRO/ATOM gauges 28,29,30: 14640,2745,915
+pool 13 XPRT/ATOM gauges 37,38,39: 73120,2745,915
+pool 15 XPRT/OSMO gauges 43,44,45: 73120,2745,915
+pool 22 REGEN/ATOM gauges 64,65,66: 48000,9000,3000
+pool 42 REGEN/OSMO gauges 124,125,126: 48000,9000,3000
 ```
 
 ## Command to make the proposal
@@ -90,3 +97,7 @@ DVPN/ATOM gauges 19,20,21: 54880,10290,3430
 See command.md
 
 ## How to check this
+
+Check each step of the above derivation. (You can get the gauge ids for the last part by querying the gauge ID via `osmosisd query incentives gauge-by-id {number}`)
+
+Then query the live proposal at `osmosisd query gov proposal {number}`, and check that the gauge/allocation point mapping is correct.
