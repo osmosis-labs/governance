@@ -37,3 +37,7 @@ community members, including:
 - [Discord](https://discord.gg/MtHXKnrHDq)
 - [Telegram](https://t.me/osmosis_chat)
 - anywhere else you might interact with members of the Osmosis community!
+
+## Thanks
+
+This repository was heavily derived from the excellent work of the Cosmos Hub Governance Working Group that can be found in https://github.com/cosmos/governance
