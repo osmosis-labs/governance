@@ -68,4 +68,18 @@
 ## Limitations of this Model / Proposal
 - Does not take account of correlations between X/OSMO and X/ATOM pools.
 - Does not directly deal with the implications of redirecting X/ATOM trade through combination of X/OSMO and OSMO/ATOM. ie using two pools instead of one doubles the "volume" created by each trade.
-- Does not (yet) specify the process for adding incentivized pools, or what share percentage they should start at. This could be left open to ad-hoc governance, or formalized as well (discussion needed)
+
+## Open Questions
+- How are we deciing eligbility for pool incentives?
+  - So far we seem to have followed a process of roughly:
+    -  "We incentivize the largest X/OSMO and X/ATOM pool which has non-zero swap fee"
+  - Do we have a preference for particular pool weights?
+    - Pools 1, 3, 5, 7, 9, 10, 13, 15, 22, and 42 are all 50/50
+    - Pools 2, 4, 6 and 8 are not.
+  - What about pools with more than 2 assets?
+    - Would triple pools (Osmo/Atom/X) for each token X be a good compromise. Where it's possible to directly trade Atom/X, but where rewards are linked to OSMO exposure?
+    - What about "one big pool" with all the assets?
+      - This could be market cap weighted to make a diversified index fund.
+- How do we decide the share of incentives a new pool should get?
+  - The relative liquidity model cannot tell us a correct starting incentive share, it only gives adjustments relative to current amounts.
+  - A reasonable option might be to select a starting share which would give the pool an APR equal to the TVL weighted average of existing pools.
