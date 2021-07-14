@@ -48,10 +48,10 @@
   - Data (TVL and Volume) is pulled from https://api-osmosis.imperator.co/search/v1/pools through the use of a [script](https://gist.github.com/UnityChaos/b6af1b8352416dfd4570048616218110) which currently runs automatically every hour.
   - We calculate the (7day) Relative Liquidity for each pool.
   - Relative Liquidity for each pool is "Biased" according to the `Bias` factor (currently 50%).
-    - For a factor of 50%, this means that OSMO pools will target a Relaive Liquidity 50% higher than average, and ATOM pools will target a value 50% lower.
+    - For a factor of 50%, this means that OSMO pools will target a Relative Liquidity 50% higher than average, and ATOM pools will target a value 50% lower.
     - For example, if average Relative Liquidity was 200%, we would be targeting OSMO pools at 300% and ATOM pools at 100%.
   - We divide the average Relative Liquidity (over all incentivized pools) by each pool's Biased Relative Liquidity to find the "Imbalance" factor.
-  - We then take the current percentage share of liquidity incentives going to each pool, and adjust them by multplying by the Imbalance factor passed through a modified Logit function.
+  - We then take the current percentage share of liquidity incentives going to each pool, and adjust them by multiplying by the Imbalance factor passed through a modified Logit function.
     - This function maps Imbalance values to adjustments, which are bounded by the `Scale` factor(currently 10%), and have the property that small Imbalances (between 50% and 150%) are mapped to smaller adjustments.
       - For example, so that a pool with an Imbalance factor of 105% would be adjusted by 0.44% rather than a full 5%.
   - After adjustment, the share percentages have to be renormalized so that their sum matches what it was before.
@@ -61,7 +61,7 @@
   - These renormalized percentages are then used to automatically derive new Gauge weights. This is what will actually be proposed on chain.
     - Desired total gauge weight for each pool is taken to be the pool's desired share of incentives multiplied by 1,000,000, and then rounded
     - These total gauge weights for each pool are then split into gauges for each time scale. With the 1 day getting 80%, the 7 day 15%, and the 14 day getting 5%. These are also rounded.
-    - The total guage weights of each pool and of all together are summed up again to factor in any small effects of rounding, and the final share percentages are derived.
+    - The total gauge weights of each pool and of all together are summed up again to factor in any small effects of rounding, and the final share percentages are derived.
     - These should generally match the "Desired Share" percentages to at least the first few decimal places.
 
 
@@ -70,14 +70,14 @@
 - Does not directly deal with the implications of redirecting X/ATOM trade through combination of X/OSMO and OSMO/ATOM. ie using two pools instead of one doubles the "volume" created by each trade.
 
 ## Open Questions
-- How are we deciing eligbility for pool incentives?
+- How are we deciding eligibility for pool incentives?
   - So far we seem to have followed a process of roughly:
     -  "We incentivize the largest X/OSMO and X/ATOM pool which has non-zero swap fee"
   - Do we have a preference for particular pool weights?
     - Pools 1, 3, 5, 7, 9, 10, 13, 15, 22, and 42 are all 50/50
     - Pools 2, 4, 6 and 8 are not.
   - What about pools with more than 2 assets?
-    - Would triple pools (Osmo/Atom/X) for each token X be a good compromise. Where it's possible to directly trade Atom/X, but where rewards are linked to OSMO exposure?
+    - Would triple pools (OSMO/ATOM/X) for each token X be a good compromise. Where it's possible to directly trade Atom/X, but where rewards are linked to OSMO exposure?
     - What about "one big pool" with all the assets?
       - This could be market cap weighted to make a diversified index fund.
 - How do we decide the share of incentives a new pool should get?
