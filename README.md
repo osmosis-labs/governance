@@ -28,10 +28,10 @@ the different types of proposals, and how to submit one.
 ## Community
 
 Osmosis governance is driven by the Osmosis community, which has large overlap with the Cosmos community.
-Much of the documentation this repo is based off
+Much of the documentation this repo is based on
  was funded by the community fund itself in 
 [Cosmos Hub Proposal 23](https://www.mintscan.io/cosmos/proposals/23).
-Governance discussions happens in a number of places moderated by diverse
+Governance discussions happen in a number of places moderated by diverse
 community members, including:
 
 - [Discord](https://discord.gg/MtHXKnrHDq)
