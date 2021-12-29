@@ -7,7 +7,7 @@ There are currently three types of proposals supported by the Cosmos Hub:
   an important project.
 - [Parameter Change](/params-change) - Proposal to change a core on-chain parameter.
 - [Text](/text) - Proposal to agree to a certain strategy, plan, commitment, future
-  upgrade or other statement. Text proposals are exclusively a signalling mechanism and focal point for future coordination - 
+  upgrade or other statements. Text proposals are exclusively a signaling mechanism and focal point for future coordination - 
   they do not directly cause any changes.
 
 You'll first want to determine which kind of proposal you are making. Be sure to
