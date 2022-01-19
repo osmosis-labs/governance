@@ -26,7 +26,7 @@ There are four criteria:
 1. A minimum deposit of 500 OSMO is required for the proposal to enter the voting period
    - anyone may contribute to this deposit
    - the deposit must be reached within 14 days (this is the deposit period)
-2. A minimum of 40% of the network's voting power (quorum) is required to participate to make the proposal valid
+2. A minimum of 30% of the network's voting power (quorum) is required to participate to make the proposal valid
 3. A simple majority (greater than 50%) of the participating voting power must back the 'yes' vote during the 14-day voting period
 4. Less than 33.4% of participating voting power votes 'no-with-veto'
 
