@@ -14,7 +14,7 @@ In the past, different people have considered contributions amounts differently.
 #### Burned deposits
 Deposits are burned when proposals:
 1. **Expire** - deposits will be burned if the deposit period ends before reaching the minimum deposit (500 OSMO)
-2. **Fail** to reach quorum - deposits will be burned for proposals that do not reach quorum ie. 40% of all staked OSMO must vote
+2. **Fail** to reach quorum - deposits will be burned for proposals that do not reach quorum ie. 30% of all staked OSMO must vote
 3. **Are vetoed** - deposits for proposals with 33.4% of voting power backing the 'no-with-veto' option are also burned
 
 ### 2. Voting Period
