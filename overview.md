@@ -4,17 +4,17 @@
 
 ### 1. Deposit Period
 
-The deposit period lasts either 14 days or until the proposal deposit totals 2500 OSMOs, whichever happens first.
+The deposit period lasts either 14 days or until the proposal deposit totals 500 OSMOs, whichever happens first.
 
 #### Deposits
-Deposit amounts are at risk of being burned. Prior to a governance proposal entering the voting period (ie. for the proposal to be voted upon), there must be at least a minimum number of OSMOs deposited (2500). Anyone may contribute to this deposit. Deposits of passed and failed proposals are returned to the contributors.
+Deposit amounts are at risk of being burned. Prior to a governance proposal entering the voting period (ie. for the proposal to be voted upon), there must be at least a minimum number of OSMOs deposited (500). Anyone may contribute to this deposit. Deposits of passed and failed proposals are returned to the contributors.
 
-In the past, different people have considered contributions amounts differently. There is some consensus that this should be a personal choice. There is also some consensus that this can be an opportunity for supporters to signal their support by adding to the deposit amount, so a proposer may choose to leave contribution room (ie. a deposit below 2500 OSMOs) so that others may participate. It is important to remember that any contributed OSMOs are at risk of being burned.
+In the past, different people have considered contributions amounts differently. There is some consensus that this should be a personal choice. There is also some consensus that this can be an opportunity for supporters to signal their support by adding to the deposit amount, so a proposer may choose to leave contribution room (ie. a deposit below 500 OSMOs) so that others may participate. It is important to remember that any contributed OSMOs are at risk of being burned.
 
 #### Burned deposits
 Deposits are burned when proposals:
-1. **Expire** - deposits will be burned if the deposit period ends before reaching the minimum deposit (2500 OSMO)
-2. **Fail** to reach quorum - deposits will be burned for proposals that do not reach quorum ie. 40% of all staked ATOM must vote
+1. **Expire** - deposits will be burned if the deposit period ends before reaching the minimum deposit (500 OSMO)
+2. **Fail** to reach quorum - deposits will be burned for proposals that do not reach quorum ie. 30% of all staked OSMO must vote
 3. **Are vetoed** - deposits for proposals with 33.4% of voting power backing the 'no-with-veto' option are also burned
 
 ### 2. Voting Period
@@ -23,10 +23,10 @@ The voting period is currently a fixed 3-day period. During the voting period, p
 ## What determines whether or not a governance proposal passes?
 There are four criteria:
 
-1. A minimum deposit of 2500 OSMO is required for the proposal to enter the voting period
+1. A minimum deposit of 500 OSMO is required for the proposal to enter the voting period
    - anyone may contribute to this deposit
    - the deposit must be reached within 14 days (this is the deposit period)
-2. A minimum of 40% of the network's voting power (quorum) is required to participate to make the proposal valid
+2. A minimum of 30% of the network's voting power (quorum) is required to participate to make the proposal valid
 3. A simple majority (greater than 50%) of the participating voting power must back the 'yes' vote during the 14-day voting period
 4. Less than 33.4% of participating voting power votes 'no-with-veto'
 
